@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ABC School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href=" static/img/favicon.png " rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                    <h1 class="m-0"><span class="text-primary">ABC S</span>chool</h1>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Location</h6>
+                        <small>123 Street, New York, USA</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
+                        <small>abcschool@example.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
+                        <small>+012 345 6789</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                        <h3 class=" text-white ">Student registration</h3>
+                        <div class="d-inline-flex text-white">
+                            <p class="m-0">Register here</p>
+                            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <!-- Contact Start -->
+                    <div class="container-fluid ">
+                        <div class="container py-5">
+                            <div class="text-center mb-5">
+                                <h1 class="text-white">Student registration</h1>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="contact-form bg-secondary rounded p-5">
+                                        <div id="success"></div>
+                                        <form name="sentMessage" id="contactForm" novalidate="novalidate" method="POST" action="studentreg">
+                                            {% csrf_token %}
+                                            <div class="control-group">
+                                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Name" name="name" required="required" data-validation-required-message="Please enter your name" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="control-group">
+                                                <input type="date" class="form-control border-0 p-4" id="email" placeholder="dob" name='dob' required="required" data-validation-required-message="Please enter your date of birth" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="control-group">
+                                                <input type="number" class="form-control border-0 p-4" id="phone_nu" placeholder="number" name="phone" required="required" data-validation-required-message="Please enter a subject" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="control-group">
+                                                <input type="text" class="form-control border-0 p-4" id="username" placeholder="username" name="username" required="required" data-validation-required-message="Please enter a subject" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="control-group">
+                                                <input type="password" class="form-control border-0 p-4" id="password" placeholder="password" name="password" required="required" data-validation-required-message="Please enter a subject" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="text-center">
+                                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Register</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <!-- Contact End -->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
